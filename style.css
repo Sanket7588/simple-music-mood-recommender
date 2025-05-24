@@ -1,0 +1,111 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f5af19, #f12711);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: gradientShift 10s infinite alternate;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.banner {
+  width: 80%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.banner:hover {
+  transform: scale(1.05);
+}
+
+#recommendation {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+#recommendation a {
+  color: #fffa65;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#recommendation a:hover {
+  text-decoration: underline;
+}
+
+/* Perfect button styles */
+button {
+  background: linear-gradient(135deg, #fffa65, #ff8800);
+  color: #000;
+  border: none;
+  padding: 0.8rem 2rem;
+  margin: 0.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff8800, #fffa65);
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% { background: linear-gradient(135deg, #f5af19, #f12711); }
+  100% { background: linear-gradient(135deg, #11f57f, #116af5); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
